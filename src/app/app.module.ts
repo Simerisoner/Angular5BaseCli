@@ -18,6 +18,7 @@ import { APP_PROVIDERS } from './app.providers';
 import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import {GitHubCardComponents} from "./git-hub-card/git-hub-card.component";
 
 export const MATERIAL_COMPONENTS = [
   MatToolbarModule,
@@ -34,7 +35,8 @@ export const MATERIAL_COMPONENTS = [
     AppComponent,
     MainComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    GitHubCardComponents
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,7 @@ export const MATERIAL_COMPONENTS = [
     BrowserAnimationsModule,
     MATERIAL_COMPONENTS,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
   ],
   providers: [APP_PROVIDERS],
   bootstrap: [AppComponent]
