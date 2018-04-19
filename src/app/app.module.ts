@@ -18,6 +18,7 @@ import { APP_PROVIDERS } from './app.providers';
 import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { FrutaComponent } from './fruta/fruta.component';
 
 export const MATERIAL_COMPONENTS = [
   MatToolbarModule,
@@ -34,7 +35,8 @@ export const MATERIAL_COMPONENTS = [
     AppComponent,
     MainComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    FrutaComponent
   ],
   imports: [
     BrowserModule,
