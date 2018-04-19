@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from "@angular/core";
+import { Component, OnInit, OnDestroy, Input } from "@angular/core";
 import { GitHubModel } from "../model/git-hub-model";
 
 @Component({
@@ -9,20 +9,9 @@ import { GitHubModel } from "../model/git-hub-model";
 
 export class GitHubCardComponents implements OnInit, OnDestroy {
     
-    gitHubData: GitHubModel;
+    @Input('github-data') gitHubData: GitHubModel; //INPUT Envia informacion de padre a hijo
+    constructor() {}
 
-    constructor() {
-        this.gitHubData = new GitHubModel();
-        this.gitHubData.avatar_url = 'http://cdn.onlinewebfonts.com/svg/img_87237.png';
-        this.gitHubData.followers = 1;
-        this.gitHubData.following = 1;
-        this.gitHubData.login = 'Simerisoner';
-        this.gitHubData.name = 'Alfredo Martinez Ramirez';
-    }
-    ngOnInit() {
-            
-    }
-    ngOnDestroy() {
-
-    }   
+    ngOnInit() {}
+    ngOnDestroy() {}   
 }
