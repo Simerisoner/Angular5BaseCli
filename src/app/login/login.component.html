@@ -1,19 +1,31 @@
 <div class="center-container">
-  <div class="login-title">
-      <h2> Login  </h2>
+  <div class="item login-title">
+      <h1 clas="elegantshadow">Login</h1>
   </div>
 
   <div class="item">
-      <label> Username:  </label>
-      <input type="text" [(ngModel)]="user"/>
+    <img class="img-login" src="http://www.haipic.com/icon/17167/17167.png"/>
+  </div>
+
+  <div class="item">    
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Username" type="text" [(ngModel)]="user"/>
+      </mat-form-field>
   </div>
 
   <div class="item">
-      <label> Password:  </label>
-      <input type="password" [(ngModel)]="pass"/>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Password" type="password" [(ngModel)]="pass"/>
+      </mat-form-field>
+
   </div>
   
   <div class="login-button">
-    <button (click)="iniciarSesion()" >Iniciar sesi&oacute;n</button>
+    <button mat-fab color="warn" (click)="iniciarSesion()">Login!</button>
+  </div>
+  <div>
+
+    
+
   </div>
 </div>
