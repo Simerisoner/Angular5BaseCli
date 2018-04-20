@@ -1,4 +1,21 @@
-<div class="center-container">
+<section class="login-form-wrap">
+  <h1>Login</h1>
+  <form class="login-form" action="POST" action="#">
+    <label>
+      <input type="email" name="email" [(ngModel)]="user" required placeholder="User" >
+    </label>
+    <label>
+      <input type="password" name="password" required placeholder="Password" [(ngModel)]="pass">
+    </label>
+    <input type="submit" value="Login" (click)="iniciarSesion()">
+  </form>
+  <h5><a href="#">Forgot password</a></h5>
+</section>
+
+
+<!-- CodigoOriginal -->
+
+<!-- <div class="center-container">
   <div class="item login-title">
       <h1 clas="elegantshadow">Login</h1>
   </div>
@@ -28,4 +45,4 @@
     
 
   </div>
-</div>
+</div> -->
