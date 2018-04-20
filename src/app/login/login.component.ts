@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, Input } from "@angular/core";
 import { LoginService } from "../services/valida-login.service";
-// import { GitHubModel } from "../model/git-hub-model";
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-login',
@@ -11,12 +11,13 @@ import { LoginService } from "../services/valida-login.service";
 export class LoginComponent implements OnInit, OnDestroy {
     user: string;
     pass: string;
-    constructor(private _login: LoginService) {}
+    constructor(private _login: LoginService, private router: Router) {}
 
     ngOnInit() {}
     ngOnDestroy() {}   
 
     iniciarSesion(){
-        this._login.setValida(this.user,this.pass);
+        this._login.setValidacion(this.user,this.pass)
+        this.router.navigate(['login']);
     }
 }
