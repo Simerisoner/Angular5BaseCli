@@ -1,17 +1,12 @@
-import { Component, OnInit, OnDestroy, Input } from "@angular/core";
-// import { GitHubModel } from "../model/git-hub-model";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
     selector: 'app-principal',
     templateUrl: './principal.component.html',
     styleUrls: ['./principal.component.css']
 })
-
-export class PrincipalComponent implements OnInit, OnDestroy {
-    
-    // @Input('github-data') gitHubData: GitHubModel; //INPUT Envia informacion de padre a hijo
+export class PrincipalComponent implements OnInit {
     constructor() {}
 
     ngOnInit() {}
-    ngOnDestroy() {}   
 }

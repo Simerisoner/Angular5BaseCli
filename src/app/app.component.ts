@@ -15,10 +15,12 @@ export class AppComponent {
 }
 
 export const routes: Routes = [
+  { path: '',
+   component: PrincipalComponent 
+  },
   { 
-    path: '', 
-    // component: MainComponent 
-    component: PrincipalComponent 
+    path: 'home', 
+    component: MainComponent 
   },
   { 
     path: 'about', 

@@ -55,7 +55,7 @@ export const MATERIAL_COMPONENTS = [
     BrowserAnimationsModule,
     MATERIAL_COMPONENTS,
     FormsModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes)
   ],
   providers: [APP_PROVIDERS],
   bootstrap: [AppComponent]

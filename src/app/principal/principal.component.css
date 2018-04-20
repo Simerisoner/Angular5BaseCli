@@ -1,14 +1,6 @@
-.card {
-    border: 1px solid black;
-    width: 350px;
-}
 
-.horizontal-container {
-    display: flex;
-    flex-direction: row;
-}
-
-.data-container {
+.center-container {
     margin: 10px;
+    display: flex;
     justify-content: center;
 }

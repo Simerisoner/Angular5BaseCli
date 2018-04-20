@@ -1,13 +1,19 @@
 <div class="center-container">
-  <div>
-      <label> Username  </label>
+  <div class="login-title">
+      <h2> Login  </h2>
+  </div>
+
+  <div class="item">
+      <label> Username:  </label>
       <input type="text" [(ngModel)]="user"/>
-    </div>
-  <div>
-      <label> Password  </label>
-      <input type="text" [(ngModel)]="pass"/>
-    </div>
-    <div>
-      <button (click)="iniciarSesion()" >Iniciar sesion</button>
-    </div>
+  </div>
+
+  <div class="item">
+      <label> Password:  </label>
+      <input type="password" [(ngModel)]="pass"/>
+  </div>
+  
+  <div class="login-button">
+    <button (click)="iniciarSesion()" >Iniciar sesi&oacute;n</button>
+  </div>
 </div>

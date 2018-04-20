@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     ngOnDestroy() {}   
 
     iniciarSesion(){
-        this._login.setValidacion(this.user,this.pass)
-        this.router.navigate(['login']);
+        this._login.setValidacion(this.user,this.pass)?this.router.navigate(['home']):`Nimaiz${alert('!!Invalid login¡¡')}`;
+        // this.router.navigate(['login']);
     }
 }
