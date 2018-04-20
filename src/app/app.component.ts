@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { PrincipalComponent } from './principal/principal.component';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ export class AppComponent {
 export const routes: Routes = [
   { 
     path: '', 
-    component: MainComponent 
+    // component: MainComponent 
+    component: PrincipalComponent 
   },
   { 
     path: 'about', 
