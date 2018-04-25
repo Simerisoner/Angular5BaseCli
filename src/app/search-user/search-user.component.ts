@@ -14,7 +14,7 @@ export class SearchUserComponent implements OnInit, OnDestroy {
     
     ngOnDestroy(){}
     
-    onServeClick() {//Evento que se ejecuta desde "search-user.component.html"
+    onSearchClick() {//Evento que se ejecuta desde "search-user.component.html"
         this.onSearchUser.emit(this.userName);
     }
     

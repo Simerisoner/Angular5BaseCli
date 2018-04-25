@@ -1,11 +1,12 @@
 import { TestBed, inject } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http';
 import { ConsumeService } from './consume.service';
 
 describe('ConsumeService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ConsumeService]
+      providers: [ConsumeService],
+      imports: [HttpClientModule]
     });
   });
 

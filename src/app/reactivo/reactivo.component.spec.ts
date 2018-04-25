@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
+import { APP_PROVIDERS } from "../app.providers";
 import { ReactivoComponent } from './reactivo.component';
 
 describe('ReactivoComponent', () => {
@@ -8,7 +9,9 @@ describe('ReactivoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReactivoComponent ]
+      declarations: [ ReactivoComponent ],
+      imports: [FormsModule],
+      providers: [APP_PROVIDERS]
     })
     .compileComponents();
   }));

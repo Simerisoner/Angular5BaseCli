@@ -2,12 +2,12 @@
   <h1>Login</h1>
   <form class="login-form" action="POST" action="#">
     <label>
-      <input type="email" name="email" [(ngModel)]="user" required placeholder="User" >
+      <input id="email" type="email" name="email" [(ngModel)]="user" required placeholder="User" >
     </label>
     <label>
-      <input type="password" name="password" required placeholder="Password" [(ngModel)]="pass">
+      <input id="password" type="password" name="password" required placeholder="Password" [(ngModel)]="pass">
     </label>
-    <input type="submit" value="Login" (click)="iniciarSesion()">
+    <input id="logear" type="submit" value="Login" (click)="iniciarSesion()">
   </form>
   <h5><a href="#">Forgot password</a></h5>
 </section>

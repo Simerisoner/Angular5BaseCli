@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit, OnDestroy {
     user: string;
     pass: string;
-    constructor(private _login: LoginService, private router: Router) {}
+    constructor(private _login: LoginService, public router: Router) {}
 
     ngOnInit() {}
     ngOnDestroy() {}   
@@ -19,8 +19,6 @@ export class LoginComponent implements OnInit, OnDestroy {
     iniciarSesion(){
         this._login
         .setValidacion(this.user,this.pass)?
-        (this.router.navigate(['home'])+''+
-        alert('!! Welcome '+this.user+' !!')):
-        alert('!!Invalid login¡¡');
+        (this.router.navigate([''])):'';
     }
 }
