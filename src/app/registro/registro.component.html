@@ -1,0 +1,68 @@
+<div class="container-1">
+  <div class="container-2">
+    <div><h1>Register</h1></div>
+    <div class="item">
+      <label>User:</label>
+      <label>
+        <input id="username" type="text" name="username" [(ngModel)]="username" placeholder="Username" >
+      </label>
+    </div>
+    <div class="item">
+      <label>Password:</label>
+      <label>
+        <input id="password" type="password" name="password" [(ngModel)]="password" placeholder="Password" >
+      </label>
+    </div>  
+    <div class="item">
+      <label>Confirm password:</label>
+      <label>
+        <input id="cpassword" type="text" name="cpassword" [(ngModel)]="cpassword" placeholder="Conf. password" >
+      </label>
+    </div>
+    <div class="item">
+      <label>Email:</label>
+      <label>
+        <input id="email" type="email" name="email" [(ngModel)]="email" placeholder="Email" >
+      </label>
+    </div>
+    <div class="item">
+      <label>name:</label>
+      <label>
+        <input id="nombre" type="text" name="nombre" [(ngModel)]="nombre" placeholder="Nombre" >
+      </label>
+    </div>
+    <div class="item">
+      <label><cite>Aceptar terminos y condiciones:</cite></label>
+      <label>
+        <input id="terminos" type="checkbox" name="terminos" [(ngModel)]="terminos" >
+      </label>
+    </div>
+    <div class="item">
+      <label>
+          <button (click)="validarRegistro()"> Register </button>
+      </label>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div id="msgInOut" class="item">{{messageInOut}}</div>
+  </div>
+</div>
+
+
+<!-- <section class="login-form-wrap">
+    <h1>Login</h1>
+    <form class="login-form" action="POST" action="#">
+      <label>
+          <input id="user" type="text" name="user" [(ngModel)]="user" required placeholder="User" >
+      </label>
+      <label>
+        <input id="email" type="email" name="email" [(ngModel)]="email" required placeholder="email" >
+      </label>
+      <label>
+        <input id="password" type="password" name="password" required placeholder="Password" [(ngModel)]="pass">
+      </label>
+      <input id="logear" type="submit" value="Login" (click)="iniciarSesion()">
+    </form>
+    <h5><a href="#">Forgot password</a></h5>
+  </section> -->

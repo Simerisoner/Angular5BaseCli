@@ -25,6 +25,7 @@ import { PasivoComponent } from './pasivo/pasivo.component';
 import { ReactivoComponent } from './reactivo/reactivo.component';
 import { LoginComponent } from './login/login.component';
 import { PrincipalComponent } from './principal/principal.component';
+import { RegistroComponent } from "./registro/registro.component";
 
 export const MATERIAL_COMPONENTS = [
   MatToolbarModule,
@@ -48,7 +49,8 @@ export const MATERIAL_COMPONENTS = [
     PasivoComponent,
     ReactivoComponent,
     LoginComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,7 @@ import { GitHubCardComponents } from "../git-hub-card/git-hub-card.component";
 import { MATERIAL_COMPONENTS } from "../app.module";
 import { PasivoComponent } from "../pasivo/pasivo.component";
 import { ReactivoComponent } from "../reactivo/reactivo.component";
+import { RegistroComponent } from "../registro/registro.component";
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -31,7 +32,8 @@ describe('LoginComponent', () => {
         SearchUserComponent,
         GitHubCardComponents,
         PasivoComponent,
-        ReactivoComponent
+        ReactivoComponent,
+        RegistroComponent
       ],
       imports: [
         FormsModule,
@@ -89,9 +91,8 @@ describe('LoginComponent', () => {
     expect(spy).toHaveBeenCalledWith('login invalid');
   });  
 
-
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
+  
 });

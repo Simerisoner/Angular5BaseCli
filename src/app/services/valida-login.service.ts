@@ -14,4 +14,22 @@ export class LoginService {
     }
     return opt;
   }
+
+  validarRegistro(username: string, password: string,cpassword: string, email: string,nombre: string, terminos: string){
+    // console.log(`${username} - ${password} - ${cpassword} - ${email} - ${nombre} - ${terminos}`);
+    // for(var x = 0; x<username.length; x++){
+    //   var letra = username.charAt(x);
+    //   if(letra === letra.toUpperCase()){
+    //       console.log('Mayuscula');   
+    //   }
+    // }
+    // let user = username
+
+    let opt = false;
+    let message = "";
+    return opt;
+    //Regex Javascript
+    //80
+  }
+
 }

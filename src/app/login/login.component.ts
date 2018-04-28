@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy, Input } from "@angular/core";
 import { LoginService } from "../services/valida-login.service";
 import { Router } from '@angular/router';
+import { RegistroComponent } from "../registro/registro.component";
 
 @Component({
     selector: 'app-login',

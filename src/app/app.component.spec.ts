@@ -16,6 +16,7 @@ import { SearchUserComponent } from "./search-user/search-user.component";
 import { GitHubCardComponents } from "./git-hub-card/git-hub-card.component";
 import { PasivoComponent } from "./pasivo/pasivo.component";
 import { ReactivoComponent } from "./reactivo/reactivo.component";
+import { RegistroComponent } from "./registro/registro.component";
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -30,7 +31,8 @@ describe('AppComponent', () => {
         SearchUserComponent,
         GitHubCardComponents,
         PasivoComponent,
-        ReactivoComponent
+        ReactivoComponent,
+        RegistroComponent
       ],
       imports: [
         MATERIAL_COMPONENTS,
