@@ -24,14 +24,17 @@ describe('RegistroComponent', () => {
   let component: RegistroComponent;
   let fixture: ComponentFixture<RegistroComponent>;
 
-  // beforeEach(async(() => {
-  //   TestBed.configureTestingModule({
-  //     declarations: [ RegistroComponent ],
-  //     imports: [FormsModule, RouterModule.forRoot(routes)],
-  //     providers: [APP_PROVIDERS]
-  //   })
-  //   .compileComponents();
-  // }));
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ 
+        RegistroComponent,
+        PrincipalComponent
+        ],
+      imports: [FormsModule, RouterModule.forRoot(routes)],
+      providers: [APP_PROVIDERS]
+    })
+    .compileComponents();
+  }));
   
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -68,7 +71,7 @@ describe('RegistroComponent', () => {
   });
 
    it('should call onRegisterClick', () => {
-      let service: LoginService;
+      
       const compiled = fixture.nativeElement;
 
       let msg2 = 'Error';
@@ -76,6 +79,15 @@ describe('RegistroComponent', () => {
       let err = compiled.querySelector('#message').textContent;
       expect(msg2).toContain(err);
     });  
+
+    it('', () => {
+      let service: LoginService;
+      let opt = true;
+      let serv = service.validarRegistro('cdbbR23dSbs','cdbbR23dSbs','','','','');
+      console.log("ServicoTesting "+serv);
+      
+      expect(opt).toEqual(serv);
+    });
 
 });
 
