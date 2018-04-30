@@ -68,14 +68,14 @@ describe('RegistroComponent', () => {
   });
 
    it('should call onRegisterClick', () => {
-    let service: LoginService;
-    const compiled = fixture.nativeElement;
+      let service: LoginService;
+      const compiled = fixture.nativeElement;
 
-    let msg2 = 'Error';
-    component.validacion();
-    let err = compiled.querySelector('#msgInOut').textContent;
-    expect(msg2).toContain(err);
-  });  
+      let msg2 = 'Error';
+      component.validacion();
+      let err = compiled.querySelector('#message').textContent;
+      expect(msg2).toContain(err);
+    });  
 
 });
 

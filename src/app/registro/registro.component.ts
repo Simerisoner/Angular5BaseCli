@@ -10,7 +10,7 @@ import { LoginService } from "../services/valida-login.service";
 })
 
 export class RegistroComponent implements OnInit, OnDestroy {
-    messageInOut: string;
+    message: string;
     username: string;
     password: string;
     cpassword: string;
@@ -22,9 +22,9 @@ export class RegistroComponent implements OnInit, OnDestroy {
     ngOnInit() {}
     ngOnDestroy() {}   
     validacion(){
+        // console.log(this._registro.validarRegistro);
+        
         this._registro.validarRegistro(this.username,this.password,this.cpassword,this.email,this.nombre,this.terminos)?
-        this.messageInOut= 'Succesfull' : this.messageInOut = 'Error';
+        this.message= 'Succesfull' : this.message = 'Error';
     }
-
-    
 }
