@@ -10,21 +10,26 @@ import { LoginService } from "../services/valida-login.service";
 })
 
 export class RegistroComponent implements OnInit, OnDestroy {
-    message: string;
-    username: string;
-    password: string;
-    cpassword: string;
-    email: string;
-    nombre: string;
-    terminos: string;
+    message: string = "";
+    username: string = "";
+    password: string = "";
+    cpassword: string = "";
+    email: string = "";
+    nombre: string = "";
+    terminos: boolean = false;
     constructor(private _registro: LoginService) {}
 
-    ngOnInit() {}
-    ngOnDestroy() {}   
+   
     validacion(){
-        // console.log(this._registro.validarRegistro);
         
-        this._registro.validarRegistro(this.username,this.password,this.cpassword,this.email,this.nombre,this.terminos)?
-        this.message= 'Succesfull' : this.message = 'Error';
+        // let opt = this._registro.validarRegistro(this.username,this.password,this.cpassword,this.email,this.nombre,this.terminos)?
+        // this.message= 'Succesfull' : this.message = 'Error';
+
+        let opt = ((this._registro.validaUsername(this.username))&&(this._registro.validaPassword(this.password)));
+       
+        // console.log("username: "+this.username);
+        console.log("opt: "+opt);
     }
+     ngOnInit() {}
+    ngOnDestroy() {}   
 }

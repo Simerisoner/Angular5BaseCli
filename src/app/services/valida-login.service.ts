@@ -5,6 +5,8 @@ import { Observable } from "rxjs/Rx";
 
 @Injectable()
 export class LoginService {
+  patronUsername: RegExp = /^[a-zA-Z]*$/;
+  comparacionUsername: boolean;
   
   constructor(private router: Router) { }  
   
@@ -18,31 +20,21 @@ export class LoginService {
   }
 
   validarRegistro(username: string, password: string,cpassword: string, email: string,nombre: string, terminos: string){
-    let opt = true;
     var testPass = /^(?=(?:.*\d){1})(?=(?:.*[A-Z]){1})(?=(?:.*[a-z]){1})\S{5,15}$/g;
-
-    this.validaUsername(username);
-    // this.validaPassword(password);
-    // this.validaCPassword(password,cpassword);
-    // this.validaEmail(email);
-    // this.validaNombre(nombre);
-    
- //Regex Javascript
-    //85
-    return opt;
+    let filterLetras=/^[A-Za-z\_\-\.\s\xF1\xD1]+$/;
+    let vLetras=filterLetras.test('abc');
+    return (vLetras);
   }
 
-  validaUsername (username){
-    let opt = true;
+  validaUsername(username: string): Boolean{
+    
     let testUsername = /^(?=(?:.*[a-z]){1})\S{5,15}$/g;
-    console.log("username: "+testUsername.test(username));
-    return testUsername.test(username);
+    return (testUsername.test(username));
   }
 
   validaPassword (password){
     let opt = true;
     var testPass = /^(?=(?:.*\d){1})(?=(?:.*[A-Z]){1})(?=(?:.*[a-z]){1})\S{5,15}$/g;
-    console.log("password: "+testPass.test(password));
     return testPass.test(password);
   }
   validaCPassword (password, cpassword){
