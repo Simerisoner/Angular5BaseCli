@@ -80,13 +80,13 @@ describe('RegistroComponent', () => {
       expect(msg2).toContain(err);
     });  
 
-    it('', () => {
+    it('Valida todo el formulario', () => {
       let service: LoginService;
-      let opt = true;
-      let serv = service.validarRegistro('cdbbR23dSbs','cdbbR23dSbs','','','','');
-      console.log("ServicoTesting "+serv);
-      
-      expect(opt).toEqual(serv);
+      let msg2 = 'Succesfull';
+      let serv = service.validarRegistro('Alfredo92','Alfredo92','Alfredo92','simerax@hotmail.com','Alfredo92',true);
+      const compiled = fixture.nativeElement;
+      let opt = compiled.querySelector('#msgInOut').textContent;
+      expect(msg2).toContain(msg2);
     });
 
 });

@@ -21,15 +21,9 @@ export class RegistroComponent implements OnInit, OnDestroy {
 
    
     validacion(){
-        
-        // let opt = this._registro.validarRegistro(this.username,this.password,this.cpassword,this.email,this.nombre,this.terminos)?
-        // this.message= 'Succesfull' : this.message = 'Error';
-
-        let opt = ((this._registro.validaUsername(this.username))&&(this._registro.validaPassword(this.password)));
-       
-        // console.log("username: "+this.username);
-        console.log("opt: "+opt);
+        let opt = this._registro.validarRegistro(this.username,this.password,this.cpassword,this.email,this.nombre,this.terminos)?
+        this.message= 'Succesfull' : this.message = 'Error';
     }
-     ngOnInit() {}
+    ngOnInit() {}
     ngOnDestroy() {}   
 }

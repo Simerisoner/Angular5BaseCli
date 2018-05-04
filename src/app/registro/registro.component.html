@@ -1,4 +1,40 @@
-<form class="login-form">
+<div class="container">
+  <form id="signup">
+      <div class="header">
+
+          <h3>Sign Up</h3>
+          
+          <p>You want to fill out this form</p>
+          
+      </div>
+      
+      <div class="sep"></div>
+
+      <div class="inputs">
+          <input type="text" name="username" [(ngModel)]="username" placeholder="Username" autofocus >
+
+          <input type="password" name="password" [(ngModel)]="password" placeholder="Password" >
+
+          <input type="password" name="cpassword" [(ngModel)]="cpassword" placeholder="Conf. password" >
+
+          <input type="email" name="email" [(ngModel)]="email" placeholder="e-mail"  />
+
+          <input type="text" name="nombre" [(ngModel)]="nombre" placeholder="Name" >
+          
+          <div class="checkboxy">
+              <input name="cecky" id="checky" value="1" type="checkbox" [(ngModel)]="terminos" /><label class="terms">I accept the terms of use</label>
+          </div>
+          
+          <button id="submit" (click)="validacion()"> SIGN UP FOR INVITE NOW </button>
+          <br>
+          <div id="msgInOut" class="item">{{message}}</div>
+      
+      </div>
+
+  </form>
+
+</div>
+<!-- <form class="login-form">
   <div class="container-1">
     <div class="container-2">
       <div><h1>Register</h1></div>
@@ -17,7 +53,7 @@
       <div class="item">
         <label>Confirm password:</label>
         <label>
-          <input id="cpassword" type="text" name="cpassword" [(ngModel)]="cpassword" placeholder="Conf. password" >
+          <input id="cpassword" type="password" name="cpassword" [(ngModel)]="cpassword" placeholder="Conf. password" >
         </label>
       </div>
       <div class="item">
@@ -49,4 +85,4 @@
       <div id="msgInOut" class="item">{{message}}</div>
     </div>
   </div>
-</form>
+</form> -->

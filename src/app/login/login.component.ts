@@ -12,14 +12,12 @@ import { RegistroComponent } from "../registro/registro.component";
 export class LoginComponent implements OnInit, OnDestroy {
     user: string;
     pass: string;
-    constructor(private _login: LoginService, public router: Router) {}
-
-    ngOnInit() {}
-    ngOnDestroy() {}   
+    constructor(private _login: LoginService, public router: Router) {}  
 
     iniciarSesion(){
-        this._login
-        .setValidacion(this.user,this.pass)?
-        (this.router.navigate([''])):alert('login invalid');
+        this._login.setValidacion(this.user,this.pass)?(this.router.navigate([''])):alert('login invalid');
     }
+    
+    ngOnInit() {}
+    ngOnDestroy() {} 
 }
